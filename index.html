@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shanib Khan - Aspiring Data Analyst | Python, SQL, Power BI, Excel">
+    <meta name="author" content="Shanib Khan">
+    <meta name="keywords" content="Data Analyst, Python, Power BI, SQL, Excel, Data Analytics, Delhi">
+    
+    <title>Shanib Khan | Data Analyst Portfolio</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ── LOADER OVERRIDE ── */
+        .loader-text { font-size: 1.4rem; }
+
+        /* ── HERO TAGLINE ── */
+        .hero-tagline {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            color: var(--neon-cyan);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            opacity: 0.85;
+        }
+
+        /* ── CERTIFICATIONS STRIP ── */
+        .cert-strip {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .cert-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(0,245,255,0.08);
+            border: 1px solid rgba(0,245,255,0.25);
+            border-radius: 50px;
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--neon-cyan);
+        }
+
+        /* ── TECH ICON GRID (SKILLS PAGE ICONS) ── */
+        .tech-icons-grid {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        .tech-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            cursor: default;
+            transition: transform 0.3s ease;
+        }
+        .tech-icon:hover { transform: translateY(-6px) scale(1.08); }
+        .tech-icon i { font-size: 3.5rem; filter: drop-shadow(0 0 8px currentColor); }
+        .tech-icon span {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+        }
+
+        /* ── STAT CARD ICON ── */
+        .stat-card .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-text">SHANIB.DATA</div>
+            <p style="color: var(--text-secondary); font-family: var(--font-mono); margin-top: 1rem;">Initializing insights...</p>
+        </div>
+    </div>
+    
+    <div class="bg-grid"></div>
+    <div class="bg-gradient-overlay"></div>
+    <div id="particles-container"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">SHANIB<span style="color: var(--neon-pink);">.</span>DATA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+    
+    <main>
+        <!-- ── HERO ── -->
+        <section class="hero" id="home">
+            <div class="hero-3d-container">
+                <div class="floating-shape shape-1"></div>
+                <div class="floating-shape shape-2"></div>
+                <div class="floating-shape shape-3"></div>
+                <div class="floating-shape shape-4"></div>
+            </div>
+            
+            <div class="hero-content">
+                <span class="hero-badge">📊 Open for Internships — Delhi, India</span>
+                <p class="hero-tagline">Data Analyst in the Making</p>
+                
+                <h1 class="hero-title">
+                    <span class="line1">Hello, I'm</span>
+                    <span class="line2" id="hero-name">Shanib Khan</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    <span class="typing-text">Turning Raw Data into Real Decisions</span>
+                    <span class="typing">|</span>
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-chart-bar"></i> View My Projects
+                    </a>
+                    <a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+                    </a>
+                </div>
+                
+                <div class="social-links" style="margin-top: 3rem;">
+                    <a href="https://github.com/shanib-techie" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:shanibkhan622@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── STATS ── -->
+        <section id="stats">
+            <div class="section-header reveal">
+                <span class="section-tag">📈 Quick Stats</span>
+                <h2 class="section-title">Numbers That <span class="highlight">Matter</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="stats-grid" id="stats-container"></div>
+        </section>
+
+        <!-- ── ABOUT ── -->
+        <section id="about">
+            <div class="section-header reveal">
+                <span class="section-tag">💡 About Me</span>
+                <h2 class="section-title">Who Am <span class="highlight">I?</span></h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <div class="card" style="display: grid; grid-template-columns: 280px 1fr; gap: 3rem; align-items: center;">
+                    <div class="reveal-left" style="text-align: center;">
+                        <div style="width: 200px; height: 200px; margin: 0 auto; border-radius: 50%; background: linear-gradient(135deg, var(--neon-cyan), var(--neon-pink)); padding: 5px;">
+                            <div style="width: 100%; height: 100%; border-radius: 50%; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; font-size: 4rem;">
+                                📊
+                            </div>
+                        </div>
+                        <h3 style="margin-top: 1.5rem; font-family: var(--font-display);" id="about-name">Shanib Khan</h3>
+                        <p style="color: var(--neon-cyan); font-family: var(--font-mono); font-size: 0.78rem;" id="about-title">ASPIRING DATA ANALYST</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--neon-pink);"></i> Delhi, India</p>
+                        <div class="cert-strip" style="justify-content: center; margin-top: 1.5rem;">
+                            <span class="cert-badge"><i class="fas fa-certificate"></i> Tata</span>
+                            <span class="cert-badge"><i class="fas fa-certificate"></i> Deloitte</span>
+                        </div>
+                    </div>
+                    
+                    <div class="reveal-right">
+                        <p style="font-size: 1.05rem; line-height: 1.85; margin-bottom: 1.5rem;" id="about-bio-1">
+                            I'm a passionate <span style="color: var(--neon-cyan);">Data Analyst enthusiast</span> pursuing B.Sc. (Hons) Computer Science at Delhi University. With hands-on experience in <span style="color: var(--neon-pink);">Python, SQL, Power BI, and Excel</span>, I've built real-world analytics projects covering EDA, dashboard development, and database design.
+                        </p>
+                        <p style="font-size: 1.05rem; line-height: 1.85; margin-bottom: 2rem;" id="about-bio-2">
+                            Certified by Tata and Deloitte virtual analytics programs, I love finding hidden patterns in data and converting them into impactful, decision-ready insights. Currently seeking a data analytics internship to apply and grow my skills.
+                        </p>
+                        
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://docs.google.com/document/d/1Kng5DYaj_FUddR9lf8NZzCoAKMKfdgjJ/edit?usp=drive_link&ouid=110939711274899178810&rtpof=true&sd=true" class="btn btn-primary">
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                            <a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank" class="btn btn-secondary">
+                                <i class="fab fa-linkedin-in"></i> Let's Connect
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── EXPERIENCE / JOURNEY ── -->
+        <section id="experience">
+            <div class="section-header reveal">
+                <span class="section-tag">🎓 Journey</span>
+                <h2 class="section-title">My <span class="highlight">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-timeline" id="experience-container"></div>
+        </section>
+
+        <!-- ── PROJECTS PREVIEW ── -->
+        <section id="projects">
+            <div class="section-header reveal">
+                <span class="section-tag">🗂️ Portfolio</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid" id="projects-container"></div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="projects.html" class="btn btn-secondary">
+                    View All 12 Projects <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ── SKILLS PREVIEW ── -->
+        <section id="skills">
+            <div class="section-header reveal">
+                <span class="section-tag">🛠️ Expertise</span>
+                <h2 class="section-title">Skills & <span class="highlight">Tools</span></h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <!-- Tech Icons -->
+            <div class="tech-icons-grid">
+                <div class="tech-icon" title="Python">
+                    <i class="fab fa-python" style="color: #3776ab;"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-icon" title="MySQL">
+                    <i class="fas fa-database" style="color: #00aeff;"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="tech-icon" title="Power BI">
+                    <i class="fas fa-chart-pie" style="color: #f2c811;"></i>
+                    <span>Power BI</span>
+                </div>
+                <div class="tech-icon" title="Excel">
+                    <i class="fas fa-file-excel" style="color: #217346;"></i>
+                    <span>Excel</span>
+                </div>
+                <div class="tech-icon" title="Pandas">
+                    <i class="fas fa-table" style="color: #150458;"></i>
+                    <span>Pandas</span>
+                </div>
+                <div class="tech-icon" title="NumPy">
+                    <i class="fas fa-superscript" style="color: #4dabcf;"></i>
+                    <span>NumPy</span>
+                </div>
+                <div class="tech-icon" title="Matplotlib">
+                    <i class="fas fa-chart-area" style="color: #11557c;"></i>
+                    <span>Matplotlib</span>
+                </div>
+                <div class="tech-icon" title="Scikit-learn">
+                    <i class="fas fa-robot" style="color: #f89939;"></i>
+                    <span>Scikit-learn</span>
+                </div>
+                <div class="tech-icon" title="Git">
+                    <i class="fab fa-git-alt" style="color: #f05032;"></i>
+                    <span>Git</span>
+                </div>
+            </div>
+            
+            <div class="skills-container" id="skills-container" style="margin-top: 3rem;"></div>
+            
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="skills.html" class="btn btn-secondary">
+                    View Detailed Skills <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ── CONTACT CTA ── -->
+        <section id="contact-cta" style="text-align: center;">
+            <div class="card reveal" style="max-width: 800px; margin: 0 auto; padding: 4rem;">
+                <h2 style="font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 1rem;">
+                    Looking for an <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Intern?</span>
+                </h2>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 0.5rem;">
+                    I'm actively seeking Data Analytics internship opportunities.
+                </p>
+                <p style="color: var(--text-muted); font-size: 0.9rem; font-family: var(--font-mono); margin-bottom: 2rem;">
+                    📍 Delhi, India &nbsp;|&nbsp; 📧 shanibkhan622@gmail.com
+                </p>
+                <a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 3rem;">
+                    <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p class="footer-text">
+            Built with 💜 by <a href="#">Shanib Khan</a> | © 2025 SHANIB.DATA |
+            <a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shanib-khan-515a8a316/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:shanibkhan622@gmail.com"><i class="fas fa-envelope"></i></a>
+        </p>
+    </footer>
+    
+    <canvas id="three-canvas"></canvas>
+    <script src="js/main.js"></script>
+    <script src="js/data-loader.js"></script>
+</body>
+</html>

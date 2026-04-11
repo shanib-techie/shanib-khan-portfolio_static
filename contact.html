@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Shanib Khan — Data Analyst">
+    <title>Contact | Shanib Khan</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .loader { display: none !important; }
+        .contact-page-header { text-align: center; padding: 10rem 2rem 3rem; }
+        .contact-container { max-width: 700px; margin: 0 auto; padding: 0 2rem 5rem; }
+        .contact-card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 2rem;
+        }
+        .contact-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .contact-link-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 1.5rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            transition: var(--transition-medium);
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .contact-link-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--neon-cyan);
+            box-shadow: var(--glow-cyan);
+        }
+        .contact-link-card i { font-size: 1.8rem; }
+        .contact-link-card .link-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .contact-link-card .link-value {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .linkedin-cta {
+            display: block;
+            width: 100%;
+            padding: 1.2rem;
+            text-align: center;
+            background: var(--gradient-1);
+            border: none;
+            border-radius: 16px;
+            color: var(--bg-primary);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+        .linkedin-cta:hover { transform: translateY(-3px); box-shadow: var(--glow-cyan); }
+        @media (max-width: 600px) { .contact-links-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-gradient-overlay"></div>
+    <div id="particles-container"></div>
+    
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">SHANIB<span style="color: var(--neon-pink);">.</span>DATA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </nav>
+    
+    <main>
+        <div class="contact-page-header">
+            <span class="hero-badge">📬 Get In Touch</span>
+            <h1 class="hero-title" style="margin-top: 1rem;"><span class="line2">Contact Me</span></h1>
+            <p class="hero-subtitle" style="margin-top: 1rem;">
+                <span>Open for internships, collaborations & data conversations</span>
+            </p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-card reveal">
+                <h3 style="font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 0.5rem;">
+                    Let's Connect, <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Shanib</span> is available!
+                </h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+                    I'm actively looking for <strong style="color: var(--neon-cyan);">Data Analytics internships</strong> in Delhi or remote. 
+                    Whether you want to discuss a project, share an opportunity, or just talk data — reach out!
+                </p>
+                
+                <div class="contact-links-grid">
+                    <a href="mailto:shanibkhan622@gmail.com" class="contact-link-card">
+                        <i class="fas fa-envelope" style="color: var(--neon-pink);"></i>
+                        <div>
+                            <span class="link-label">Email</span>
+                            <span class="link-value">shanibkhan622@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="tel:+919354257451" class="contact-link-card">
+                        <i class="fas fa-phone" style="color: var(--neon-cyan);"></i>
+                        <div>
+                            <span class="link-label">Phone</span>
+                            <span class="link-value">+91 9354257451</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/shanib-techie" target="_blank" class="contact-link-card">
+                        <i class="fab fa-github" style="color: var(--text-primary);"></i>
+                        <div>
+                            <span class="link-label">GitHub</span>
+                            <span class="link-value">shanib-techie</span>
+                        </div>
+                    </a>
+                    <div class="contact-link-card">
+                        <i class="fas fa-map-marker-alt" style="color: var(--neon-purple);"></i>
+                        <div>
+                            <span class="link-label">Location</span>
+                            <span class="link-value">Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://linkedin.com/in/shanib-khan" target="_blank" class="linkedin-cta">
+                    <i class="fab fa-linkedin-in" style="margin-right: 0.5rem;"></i>
+                    Connect on LinkedIn
+                </a>
+            </div>
+            
+            <div class="contact-card reveal" style="text-align: center;">
+                <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary);">
+                    📍 Delhi, India &nbsp;·&nbsp; 📊 Aspiring Data Analyst &nbsp;·&nbsp; 🎓 B.Sc. CS (Delhi University)
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p class="footer-text">
+            Built with 💜 by <a href="#">Shanib Khan</a> | © 2025 SHANIB.DATA |
+            <a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/shanib-khan" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/data-loader.js"></script>
+</body>
+</html>

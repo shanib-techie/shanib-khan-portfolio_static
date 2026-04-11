@@ -1,0 +1,204 @@
+{
+  "name": "Shanib Khan",
+  "title": "Aspiring Data Analyst",
+  "tagline": "Turning Raw Data into Real Decisions",
+  "email": "shanibkhan622@gmail.com",
+  "phone": "9354257451",
+  "location": "Delhi, India",
+  "availability": "Open for Internships",
+  "social": {
+    "github": "https://github.com/shanib-techie",
+    "linkedin": "https://linkedin.com/in/shanib-khan",
+    "twitter": "https://twitter.com",
+    "instagram": "https://instagram.com"
+  },
+  "stats": [
+    { "number": "10+", "label": "Projects Completed", "icon": "fa-folder-open" },
+    { "number": "8+", "label": "Months Experience", "icon": "fa-calendar-check" },
+    { "number": "5+", "label": "Technologies Mastered", "icon": "fa-code" },
+    { "number": "2", "label": "Certifications Earned", "icon": "fa-certificate" }
+  ],
+  "about": {
+    "bio": "I'm a <span style='color: var(--neon-cyan);'>Data Analyst enthusiast</span> pursuing B.Sc. (Hons) Computer Science at Delhi University. With hands-on experience in <span style='color: var(--neon-pink);'>Python, SQL, Power BI, and Excel</span>, I've built real-world analytics projects covering EDA, dashboard development, and database design.",
+    "bio2": "Certified by Tata and Deloitte virtual analytics programs, I love finding hidden patterns in data and converting them into impactful, decision-ready insights. Currently seeking a data analytics internship to apply and grow my skills in a real-world environment."
+  },
+  "experience": [
+    {
+      "title": "Tata Data Analytics Virtual Experience",
+      "company": "Tata Group (Forage)",
+      "location": "Online",
+      "description": "Completed an industry-grade virtual analytics program simulating real business data challenges. Worked on data cleaning, analysis, and visualization tasks reflecting actual Tata project workflows.",
+      "startDate": "2024",
+      "endDate": "2024",
+      "isCurrent": false
+    },
+    {
+      "title": "Deloitte Data Analytics Virtual Experience",
+      "company": "Deloitte (Forage)",
+      "location": "Online",
+      "description": "Participated in Deloitte's analytics simulation covering business intelligence, data storytelling, and dashboarding. Gained exposure to consulting-style data problem solving.",
+      "startDate": "2024",
+      "endDate": "2024",
+      "isCurrent": false
+    },
+    {
+      "title": "B.Sc. (Hons) Computer Science",
+      "company": "Delhi University",
+      "location": "Delhi, India",
+      "description": "Pursuing core subjects including DBMS, Computer Networks, Probability Theory, Operating Systems, and Mathematics & Statistics. First year CGPA: 7.0. Actively building projects alongside academics.",
+      "startDate": "2024",
+      "endDate": "2027",
+      "isCurrent": true
+    }
+  ],
+  "projects": [
+    {
+      "title": "Retail Store Transaction Deep Insight",
+      "description": "Analyzed retail transaction data using Python to uncover revenue trends. Built an interactive Power BI dashboard with 5+ KPIs including monthly sales trend, category breakdown, and customer retention rate.",
+      "category": "Data Analytics",
+      "tech": "Python • Pandas • Matplotlib • Power BI",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-chart-bar",
+      "comingSoon": false
+    },
+    {
+      "title": "Sales Performance & Forecast Dashboard",
+      "description": "End-to-end sales analytics on 792 transactions. Designed sales funnel to identify conversion drop-offs and implemented Linear Regression forecasting to predict next 2 quarters revenue.",
+      "category": "Data Analytics",
+      "tech": "Python • Power BI • Scikit-learn • Pandas",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-chart-line",
+      "comingSoon": false
+    },
+    {
+      "title": "Voting System Database Application",
+      "description": "Designed and developed a database-driven voting system with full CRUD functionality and normalized relational schema managing voter registration, candidates, and election results.",
+      "category": "Python",
+      "tech": "Python • MySQL • CRUD • Relational DB",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-database",
+      "comingSoon": false
+    },
+    {
+      "title": "Expense Splitter",
+      "description": "A Python application to split group expenses fairly among participants. Handles multiple scenarios, unequal splits, and generates a clear settlement summary for each member.",
+      "category": "Python",
+      "tech": "Python • CLI • Data Structures",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-calculator",
+      "comingSoon": false
+    },
+    {
+      "title": "Propose Day Funny Webpage",
+      "description": "A fun and interactive web page designed for Propose Day with playful animations, witty responses, and a quirky UI that keeps the user engaged with humorous click interactions.",
+      "category": "Web Development",
+      "tech": "HTML • CSS • JavaScript",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-heart",
+      "comingSoon": false
+    },
+    {
+      "title": "Eidi Special Webpage",
+      "description": "A festive themed webpage crafted for Eid celebrations. Features animated greetings, personalized Eidi messages, and a warm festive UI with custom animations and interactive elements.",
+      "category": "Web Development",
+      "tech": "HTML • CSS • JavaScript • Animations",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-moon",
+      "comingSoon": false
+    },
+    {
+      "title": "Data Generator Tool",
+      "description": "A Python utility to generate realistic synthetic datasets for testing and demonstration. Supports custom schemas, data types, and volume. Useful for prototyping analytics pipelines.",
+      "category": "Python",
+      "tech": "Python • Faker • Pandas • CSV/Excel",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-cogs",
+      "comingSoon": false
+    },
+    {
+      "title": "Guess the Number Game",
+      "description": "A Python number guessing game with difficulty modes, score tracking, and a hint system. Built to practice control flow, functions, and user input handling.",
+      "category": "Python",
+      "tech": "Python • Random • CLI",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-gamepad",
+      "comingSoon": false
+    },
+    {
+      "title": "Customer Churn Analysis Dashboard",
+      "description": "Exploratory data analysis on telecom customer churn data. Identifies key churn predictors, visualizes behavioral patterns, and delivers a Power BI dashboard for stakeholder reporting.",
+      "category": "Data Analytics",
+      "tech": "Python • Pandas • Seaborn • Power BI",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-users",
+      "comingSoon": true
+    },
+    {
+      "title": "HR Analytics Dashboard",
+      "description": "Analysis of employee performance, attrition trends, and department-wise metrics. Interactive visualizations to help HR teams make data-backed workforce decisions.",
+      "category": "Data Analytics",
+      "tech": "Python • Excel • Power BI • NumPy",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-user-tie",
+      "comingSoon": true
+    },
+    {
+      "title": "Sales Price Predictor",
+      "description": "Machine learning model predicting product prices based on historical sales data and features. Uses regression algorithms with cross-validation and feature engineering pipelines.",
+      "category": "Machine Learning",
+      "tech": "Python • Scikit-learn • Pandas • Matplotlib",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-brain",
+      "comingSoon": true
+    },
+    {
+      "title": "COVID-19 Data Explorer",
+      "description": "Interactive data exploration tool analyzing global COVID-19 trends. Visualizes case trajectories, recovery rates, and vaccination progress across countries using public datasets.",
+      "category": "Data Analytics",
+      "tech": "Python • Pandas • Plotly • Seaborn",
+      "githubUrl": "#",
+      "liveUrl": "#",
+      "icon": "fa-globe",
+      "comingSoon": true
+    }
+  ],
+  "skills": {
+    "Data Analysis & Python": [
+      { "name": "Python", "icon": "fab fa-python", "proficiency": 85 },
+      { "name": "Pandas & NumPy", "icon": "fas fa-table", "proficiency": 82 },
+      { "name": "Matplotlib & Seaborn", "icon": "fas fa-chart-area", "proficiency": 80 },
+      { "name": "Statistical Analysis", "icon": "fas fa-square-root-alt", "proficiency": 75 }
+    ],
+    "Databases & SQL": [
+      { "name": "MySQL", "icon": "fas fa-database", "proficiency": 80 },
+      { "name": "Database Design", "icon": "fas fa-project-diagram", "proficiency": 75 },
+      { "name": "SQL Queries & Joins", "icon": "fas fa-code", "proficiency": 78 }
+    ],
+    "Visualization & BI": [
+      { "name": "Power BI", "icon": "fas fa-chart-pie", "proficiency": 82 },
+      { "name": "MS Excel (Advanced)", "icon": "fas fa-file-excel", "proficiency": 87 },
+      { "name": "Dashboard Development", "icon": "fas fa-tachometer-alt", "proficiency": 80 }
+    ],
+    "ML & Concepts": [
+      { "name": "Scikit-learn", "icon": "fas fa-robot", "proficiency": 65 },
+      { "name": "EDA & Data Cleaning", "icon": "fas fa-broom", "proficiency": 85 },
+      { "name": "Linear Regression", "icon": "fas fa-wave-square", "proficiency": 70 }
+    ]
+  },
+  "certifications": [
+    { "name": "Tata Data Analytics Virtual Experience", "issuer": "Tata Group (Forage)", "icon": "fas fa-certificate" },
+    { "name": "Deloitte Data Analytics Virtual Experience", "issuer": "Deloitte (Forage)", "icon": "fas fa-certificate" },
+    { "name": "MS Excel Upskilling Certification", "issuer": "Simplilearn", "icon": "fas fa-file-excel" }
+  ]
+}

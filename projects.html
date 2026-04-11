@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Shanib Khan — Data Analyst">
+    <title>Projects | Shanib Khan</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 10;
+        }
+        .filter-btn {
+            padding: 0.7rem 1.4rem;
+            background: var(--bg-glass);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50px;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--gradient-1);
+            color: var(--bg-primary);
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+        .projects-page-header {
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+        }
+        .project-count-badge {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.4rem 1.2rem;
+            background: rgba(0,245,255,0.1);
+            border: 1px solid rgba(0,245,255,0.3);
+            border-radius: 50px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--neon-cyan);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-text">SHANIB.DATA</div>
+            <p style="color: var(--text-secondary); font-family: var(--font-mono); margin-top: 1rem;">Loading projects...</p>
+        </div>
+    </div>
+    <div class="bg-grid"></div>
+    <div class="bg-gradient-overlay"></div>
+    <div id="particles-container"></div>
+    
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">SHANIB<span style="color: var(--neon-pink);">.</span>DATA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </nav>
+    
+    <main>
+        <div class="projects-page-header">
+            <span class="hero-badge">🗂️ Portfolio</span>
+            <h1 class="hero-title" style="margin-top: 1rem;">
+                <span class="line2">All Projects</span>
+            </h1>
+            <p class="hero-subtitle" style="margin-top: 1rem;">
+                <span class="typing-text">Data · Python · Web · Machine Learning</span>
+            </p>
+            <span class="project-count-badge">12 Projects Total &nbsp;|&nbsp; 4 Coming Soon</span>
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all"><i class="fas fa-th"></i> All Projects</button>
+            <button class="filter-btn" data-filter="data-analytics"><i class="fas fa-chart-bar"></i> Data Analytics</button>
+            <button class="filter-btn" data-filter="python"><i class="fab fa-python"></i> Python</button>
+            <button class="filter-btn" data-filter="web-development"><i class="fas fa-code"></i> Web Development</button>
+            <button class="filter-btn" data-filter="machine-learning"><i class="fas fa-brain"></i> Machine Learning</button>
+        </div>
+        
+        <section id="projects-section" style="padding-top: 0;">
+            <div class="projects-grid" id="projects-container"></div>
+        </section>
+        
+        <section style="text-align: center; padding: 4rem 2rem; position: relative; z-index: 10;">
+            <div class="card reveal" style="max-width: 600px; margin: 0 auto; padding: 3rem;">
+                <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 1rem;">
+                    Liked a Project?
+                </h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                    Let's talk data, ideas, or internship opportunities!
+                </p>
+                <a href="https://linkedin.com/in/shanib-khan" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-linkedin-in"></i> Connect on LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p class="footer-text">
+            Built with 💜 by <a href="#">Shanib Khan</a> | © 2025 SHANIB.DATA |
+            <a href="https://github.com/shanib-techie" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/shanib-khan" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/data-loader.js"></script>
+</body>
+</html>
