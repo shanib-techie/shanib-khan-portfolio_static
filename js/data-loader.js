@@ -73,41 +73,42 @@ function buildProjectCard(project, preview = false) {
     const meta = CAT_META[project.category] || { label: project.category, color: 'var(--neon-cyan)', filter: 'other' };
     const isCS = project.comingSoon;
 
-    const cardStyle = isCS
-        ? 'opacity: 0.55; filter: grayscale(0.4); cursor: default;'
-        : '';
+    const cardClass = `project-card${isCS ? ' coming-soon' : ''}`;
 
     const backContent = isCS
-        ? `<div style="text-align:center; padding: 1rem;">
-                <p style="font-size:2.5rem; margin-bottom:1rem;">🚧</p>
-                <h3 style="font-family:var(--font-display); font-size:1rem; margin-bottom:0.5rem;">${project.title}</h3>
-                <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1.2rem;">Coming Soon</p>
-                <span style="background:rgba(255,255,255,0.1); border-radius:50px; padding:0.3rem 1rem; font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted);">${project.tech}</span>
+        ? `<div style="text-align:center;">
+                <p style="font-size:3rem; margin-bottom:0.8rem;">🚧</p>
+                <h3 style="font-family:var(--font-display); font-size:1rem; margin-bottom:0.5rem; color:var(--bg-primary);">${project.title}</h3>
+                <p style="color:rgba(10,10,15,0.85); font-size:0.85rem; margin-bottom:1rem;">Coming Soon</p>
+                <span style="background:rgba(10,10,15,0.15); border-radius:50px; padding:0.4rem 1rem; font-family:var(--font-mono); font-size:0.72rem; color:rgba(10,10,15,0.7);">${project.tech}</span>
            </div>`
-        : `<h3 style="font-family:var(--font-display); font-size:1rem; margin-bottom:0.8rem;">${project.title}</h3>
-           <p style="font-size:0.82rem; margin-bottom:1rem; color: rgba(10,10,15,0.85);">${project.tech}</p>
-           <div class="project-links">
-               <a href="${project.githubUrl}" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
-               <a href="${project.liveUrl}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+        : `<div>
+                <h3>${project.title}</h3>
+                <p class="tech-stack">${project.tech}</p>
+                <p class="back-details">${project.description}</p>
+                <div class="project-links">
+                    <a href="${project.githubUrl}" target="_blank" class="project-link"><i class="fab fa-github"></i> Code</a>
+                    <a href="${project.liveUrl}" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live</a>
+                </div>
            </div>`;
 
-    const csBadge = isCS ? `<span style="position:absolute; top:10px; right:10px; background:rgba(255,107,53,0.85); color:#fff; font-family:var(--font-mono); font-size:0.65rem; padding:3px 10px; border-radius:50px; z-index:2;">COMING SOON</span>` : '';
+    const csBadge = isCS ? `<span style="position:absolute; top:12px; right:12px; background:rgba(255,107,53,0.85); color:#fff; font-family:var(--font-mono); font-size:0.65rem; padding:3px 10px; border-radius:50px; z-index:5;">COMING SOON</span>` : '';
 
     return `
-    <div class="project-card" data-category="${meta.filter}" style="${cardStyle}">
+    <div class="${cardClass}" data-category="${meta.filter}">
         <div class="project-card-inner">
             <div class="project-card-front" style="position:relative;">
                 ${csBadge}
-                <div class="project-image" style="background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card)); display:flex; align-items:center; justify-content:center;">
+                <div class="project-image">
                     <i class="fas ${project.icon}" style="font-size:3.5rem; background:var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent;"></i>
                 </div>
                 <div class="project-info">
                     <span class="project-category" style="color:${meta.color}; border-color:${meta.color}30;">${meta.label}</span>
                     <h3 class="project-title">${project.title}</h3>
-                    <p class="project-description">${project.description.substring(0,95)}...</p>
+                    <p class="project-description">${project.description.substring(0, 90)}...</p>
                 </div>
             </div>
-            <div class="project-card-back" style="display:flex; align-items:center; justify-content:center; flex-direction:column;">
+            <div class="project-card-back">
                 ${backContent}
             </div>
         </div>
@@ -126,8 +127,16 @@ function loadProjects() {
         initProjectFilter();
     } else {
         // Home page: show 6 (prefer non-coming-soon)
-        const featured = portfolioData.projects.filter(p => !p.comingSoon).slice(0, 6);
-        container.innerHTML = featured.map(p => buildProjectCard(p, true)).join('');
+        container.innerHTML = portfolioData.projects.filter(p => !p.comingSoon).slice(0, 6).map(p => buildProjectCard(p, true)).join('');
+        // Also attach click-to-flip on home page cards
+        setTimeout(() => {
+            document.querySelectorAll('#projects-container .project-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('a')) return;
+                    card.classList.toggle('flipped');
+                });
+            });
+        }, 100);
     }
 }
 
@@ -146,6 +155,15 @@ function initProjectFilter() {
                 card.style.display = show ? 'block' : 'none';
                 if (show) card.style.animation = 'fadeIn 0.4s ease forwards';
             });
+        });
+    });
+
+    // Click-to-flip on project cards
+    cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Don't flip if clicking on a link
+            if (e.target.closest('a')) return;
+            card.classList.toggle('flipped');
         });
     });
 }
