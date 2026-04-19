@@ -361,12 +361,12 @@ function initTypingEffect() {
     if (!typingElement) return;
     
     const phrases = [
-        'Full Stack Developer',
-        'UI/UX Enthusiast',
-        'Python Expert',
-        'Creative Coder',
-        'Django Specialist',
-        'Problem Solver'
+        'Data Analyst',
+        'Python Developer',
+        'Business Analyst',
+        'Data Science Enthusiast',
+        'Power BI Specialist',
+        'SQL Expert'
     ];
     
     let phraseIndex = 0;
